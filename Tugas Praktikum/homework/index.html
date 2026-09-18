@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Profile Card</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-nav">
+    <button id="toggle-tema" type="button">Ganti Tema</button>
+  </div>
+
+  <main class="container">
+    <p id="status-profil" class="status" data-state="idle" role="status" aria-live="polite">
+      Memuat profil...
+    </p>
+
+    <div class="error-action">
+      <button id="coba-lagi" type="button" hidden>Coba Lagi</button>
+    </div>
+
+    <article id="profile-card" class="profile-card" hidden>
+      <header class="profile-header">
+        <h1 id="profile-nama"></h1>
+        <p id="profile-peran" class="role"></p>
+        <button id="toggle-detail" type="button" aria-expanded="false">Lihat Detail</button>
+      </header>
+
+      <section id="profile-detail" class="profile-detail" hidden>
+        <p id="profile-bio"></p>
+      </section>
+
+      <section class="skills-section">
+        <h2>Keterampilan</h2>
+        <ul id="skills-list" class="skills-list"></ul>
+        <p id="skills-empty" class="empty-msg" hidden>Belum ada keterampilan yang ditambahkan.</p>
+
+        <form id="form-skill" class="skill-form" novalidate>
+          <label for="input-skill">Tambah Keterampilan</label>
+          <div class="form-row">
+            <input id="input-skill" name="skill" type="text" placeholder="Contoh: React, Python">
+            <button id="tambah-skill" type="submit">Tambah</button>
+          </div>
+          <small id="error-skill" class="error-msg"></small>
+        </form>
+      </section>
+    </article>
+  </main>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

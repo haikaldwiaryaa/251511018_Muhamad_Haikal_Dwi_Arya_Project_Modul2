@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokakarya Web Dasar 2026 - D3 Teknik Informatika</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">D3 TI Lokakarya</a>
+            <div class="header-actions">
+                <button type="button" id="themeToggle" class="btn-theme" aria-pressed="false"
+                    aria-label="Ganti mode tampilan">🌙 Mode Gelap</button>
+                <button type="button" id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav"
+                    aria-label="Buka menu navigasi">☰</button>
+            </div>
+            <nav id="mainNav" class="nav-menu">
+                <a class="nav-link" href="#fitur">Materi</a>
+                <a class="nav-link" href="#paket">Paket</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+                <a class="nav-link" href="#kontak">Pendaftaran</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <h1>Kuasai Fondasi Pemrograman Web dari Nol</h1>
+                    <p>Pelajari struktur semantik HTML5, CSS Flexbox modern, dan dasar logika DOM JavaScript bersama
+                        mahasiswa D3 Teknik Informatika.</p>
+                    <a class="button button-primary" href="#kontak">Daftar Lokakarya</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/kampus.jpg" alt="Suasana kegiatan lokakarya mahasiswa di laboratorium komputer">
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur" class="features">
+            <div class="container">
+                <h2 class="section-title">Materi dan Keunggulan Lokakarya</h2>
+                <div class="filter-controls" role="group" aria-label="Filter kategori materi">
+                    <button type="button" class="filter-btn active" data-category="semua">Semua</button>
+                    <button type="button" class="filter-btn" data-category="dasar">Dasar</button>
+                    <button type="button" class="filter-btn" data-category="lanjutan">Lanjutan</button>
+                </div>
+                <div id="cardList" class="card-list" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section id="paket" class="pricing">
+            <div class="container">
+                <h2 class="section-title">Pilihan Paket Pendaftaran</h2>
+                <div class="card-list">
+                    <article class="card price-card">
+                        <h3>Mandiri</h3>
+                        <p class="price">Gratis</p>
+                        <ul>
+                            <li>Akses materi modul lengkap</li>
+                            <li>Latihan mandiri terbimbing</li>
+                        </ul>
+                        <a class="button" href="#kontak">Pilih Paket</a>
+                    </article>
+
+                    <article class="card price-card price-card--featured">
+                        <h3>Terbimbing</h3>
+                        <p class="price">Rp150.000</p>
+                        <ul>
+                            <li>Akses seluruh modul dan aset</li>
+                            <li>Review kode dan mentoring</li>
+                            <li>Sesi live code defense</li>
+                        </ul>
+                        <a class="button button-primary" href="#kontak">Pilih Paket</a>
+                    </article>
+
+                    <article class="card price-card">
+                        <h3>Intensif</h3>
+                        <p class="price">Rp250.000</p>
+                        <ul>
+                            <li>Semua fasilitas terbimbing</li>
+                            <li>Konsultasi proyek 1-on-1</li>
+                            <li>Sertifikat kompetensi web</li>
+                        </ul>
+                        <a class="button" href="#kontak">Pilih Paket</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-ans-1">
+                            <span>Apakah pemula tanpa dasar coding bisa ikut?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-ans-1" class="faq-body" hidden>
+                            <p>Tentu bisa. Lokakarya ini dirancang bertahap dari pemahaman struktur HTML dasar, styling
+                                CSS responsif, hingga logika interaktif sederhana.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span>Perangkat apa saja yang perlu disiapkan?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-ans-2" class="faq-body" hidden>
+                            <p>Peserta cukup membawa laptop dengan peramban modern (Google Chrome atau Mozilla Firefox)
+                                dan text editor seperti Visual Studio Code.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-btn" aria-expanded="false" aria-controls="faq-ans-3">
+                            <span>Bagaimana mekanisme sesi review dan mentoring?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq-ans-3" class="faq-body" hidden>
+                            <p>Peserta paket terbimbing dan intensif akan mendapatkan pendampingan langsung oleh mentor
+                                asisten laboratorium untuk meninjau baris kode dan troubleshooting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="contact">
+            <div class="container contact-wrapper">
+                <h2 class="section-title">Formulir Pendaftaran Lokakarya</h2>
+                <p class="contact-desc">Silakan isi formulir di bawah ini untuk mendaftar sesi lokakarya di Laboratorium
+                    Komputer D3 Teknik Informatika.</p>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div id="formError" class="form-feedback error-msg" aria-live="assertive" hidden></div>
+                    <div id="formSuccess" class="form-feedback success-msg" aria-live="polite" hidden></div>
+
+                    <div class="form-group">
+                        <label for="userName">Nama Lengkap <span class="required">*</span></label>
+                        <input type="text" id="userName" name="userName" class="form-control"
+                            placeholder="Contoh: Muhamad Haikal" aria-required="true" aria-invalid="false">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail">Alamat Email <span class="required">*</span></label>
+                        <input type="email" id="userEmail" name="userEmail" class="form-control"
+                            placeholder="nama@email.com" aria-required="true" aria-invalid="false">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userPackage">Pilihan Paket <span class="required">*</span></label>
+                        <select id="userPackage" name="userPackage" class="form-control" aria-required="true"
+                            aria-invalid="false">
+                            <option value="">-- Pilih Paket Lokakarya --</option>
+                            <option value="Mandiri">Mandiri (Gratis)</option>
+                            <option value="Terbimbing">Terbimbing (Rp150.000)</option>
+                            <option value="Intensif">Intensif (Rp250.000)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userNote">Catatan atau Motivasi Belajar</label>
+                        <textarea id="userNote" name="userNote" rows="3" class="form-control"
+                            placeholder="Tuliskan motivasi atau pertanyaan awal..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="button button-primary btn-block">Kirim
+                        Pendaftaran</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Muhamad Haikal Dwi Arya - D3 Teknik Informatika</p>
+            <p>Laboratorium Komputer P2T - Kampus Politeknik Negeri Bandung</p>
+        </div>
+    </footer>
+
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas halaman">↑</button>
+</body>
+
+</html>

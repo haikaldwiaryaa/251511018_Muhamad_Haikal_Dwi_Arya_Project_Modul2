@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+.container {
+  width: min(90%, 600px);
+  margin-inline: auto;
+  padding-block: 64px;
+}
+
+.card {
+  padding: 32px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.status {
+  padding: 12px;
+  border-left: 4px solid #6b7280;
+  background: #f9fafb;
+  margin-block: 16px;
+}
+
+.status[data-state="loading"] {
+  border-color: #d97706;
+}
+
+.status[data-state="success"] {
+  border-color: #16a34a;
+}
+
+.status[data-state="empty"],
+.status[data-state="error"] {
+  border-color: #dc2626;
+}
+
+.quote-box {
+  margin-block: 20px;
+}
+
+.quote-card {
+  padding: 16px;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+}
+
+.quote-card blockquote {
+  margin: 0 0 8px 0;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.quote-card cite {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #2563eb;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+#coba-lagi {
+  background: #dc2626;
+}

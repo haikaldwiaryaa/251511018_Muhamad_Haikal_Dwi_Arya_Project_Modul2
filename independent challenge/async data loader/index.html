@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Async Data Loader</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Kutipan Belajar Hari Ini</h1>
+      <p id="status" class="status" data-state="idle" role="status" aria-live="polite">
+        Klik tombol untuk memuat kutipan acak.
+      </p>
+      
+      <div id="konten-kutipan" class="quote-box"></div>
+
+      <div class="actions">
+        <button id="muat-data" type="button">Muat Data</button>
+        <button id="coba-lagi" type="button" hidden>Coba Lagi</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
